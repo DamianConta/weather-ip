@@ -46,13 +46,9 @@ Ofrece los siguientes endpoints con la ruta base /v1 y <b>Metodo GET</b>
 
 ## /v1/location
 Devuelve el estado del clima actual según la ubicación de la ip (JSON)
-<code>
 ```yaml
 {"status":"success","country":"Argentina","countryCode":"AR","region":"B","regionName":"Buenos Aires","city":"Aldo Bonzi","zip":"1770","lat":-34.6926,"lon":-58.521,"timezone":"America/Argentina/Buenos_Aires","isp":"Telecentro S.A.","org":"Telecentro S.A. - Clientes Residenciales","as":"AS27747 Telecentro S.A.","query":"181.47.70.131"}
 ```
-</code>
-
-
 ## Author
 
 👤 **Damián Contardi**
