@@ -312,7 +312,15 @@ Devuelve el forecast a 5 días de la ciudad {city} en formato JSON.
                 "rain":{"3h":0.34},
                 "sys":{"pod":"d"},
                 "dt_txt":"2022-07-01 12:00:00"
-            }
+            },
+            .
+            .
+            .
+            .
+            .
+            .
+            .
+            .
         ]
     }
 ```
