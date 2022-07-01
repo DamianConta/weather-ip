@@ -26,12 +26,11 @@ La aplicación se encuentra desplegada en https://weather-ip.herokuapp.com
 La aplicación devuelve información sobre la ubicación según http://ip-api.com y el estado del clima según
 https://api.openweathermap.org . Es posible solicitar la información para otras cinco ciudades seleccionables.
 
-Ofrece los siguientes endpoints con la ruta base /v1
+Ofrece los siguientes endpoints con la ruta base /v1 y <b>Metodo GET</b>
 
 <ol>
-  <li>/v1/location              
-  Metodo GET     Devuelve la ubicación actual según ip-api (JSON)</li>
-  <li>/v1/current               Metodo GET     </li>
+  <li>/v1/location              </li>
+  <li>/v1/current               </li>
   <li>/v1/current/roma          Metodo GET     Devuelve el estado del clima actual según la ubicación de la ciudad de Roma (JSON)</li>
   <li>/v1/current/amsterdam     Metodo GET     Devuelve el estado del clima actual según la ubicación de la ciudad de Amsterdam (JSON)</li>
   <li>/v1/current/madrid        Metodo GET     Devuelve el estado del clima actual según la ubicación de la ciudad de Madrid (JSON)</li>
@@ -47,9 +46,9 @@ Ofrece los siguientes endpoints con la ruta base /v1
 
 ## /v1/location
 Devuelve el estado del clima actual según la ubicación de la ip (JSON)
-<code>
+```json
 {"status":"success","country":"Argentina","countryCode":"AR","region":"B","regionName":"Buenos Aires","city":"Aldo Bonzi","zip":"1770","lat":-34.6926,"lon":-58.521,"timezone":"America/Argentina/Buenos_Aires","isp":"Telecentro S.A.","org":"Telecentro S.A. - Clientes Residenciales","as":"AS27747 Telecentro S.A.","query":"181.47.70.131"}
-</code>
+```
 
 
 ## Author
