@@ -31,12 +31,12 @@ Ofrece los siguientes endpoints con la ruta base /v1 y <b>Metodo GET</b>
 <ol>
   <li>/v1/location              </li>
   <li>/v1/current               </li>
-  <li>/v1/current/roma          Metodo GET     Devuelve el estado del clima actual según la ubicación de la ciudad de Roma (JSON)</li>
-  <li>/v1/current/amsterdam     Metodo GET     Devuelve el estado del clima actual según la ubicación de la ciudad de Amsterdam (JSON)</li>
-  <li>/v1/current/madrid        Metodo GET     Devuelve el estado del clima actual según la ubicación de la ciudad de Madrid (JSON)</li>
-  <li>/v1/current/paris         Metodo GET     Devuelve el estado del clima actual según la ubicación de la ciudad de Paris (JSON)</li>
-  <li>/v1/current/barcelona     Metodo GET     Devuelve el estado del clima actual según la ubicación de la ciudad de Barcelona (JSON)</li>
-  <li>/v1/forecast              Metodo GET     Devuelve el forecast a 5 días de la ubicación según ip-api (JSON)</li>
+  <li>/v1/current/roma          </li>
+  <li>/v1/current/amsterdam     </li>
+  <li>/v1/current/madrid        </li>
+  <li>/v1/current/paris         </li>
+  <li>/v1/current/barcelona     </li>
+  <li>/v1/forecast              </li>
   <li>/v1/forecast/roma         Metodo GET     Devuelve el forecast a 5 días de la ciudad de Roma (JSON)</li>
   <li>/v1/forecast/amsterdam    Metodo GET     Devuelve el forecast a 5 días de la ciudad de Amsterdam (JSON)</li>
   <li>/v1/forecast/madrid       Metodo GET     Devuelve el forecast a 5 días de la ciudad de Madrid (JSON)</li>
@@ -109,6 +109,75 @@ Devuelve el estado del clima actual según la ubicación de la ip (JSON)
     }
 }
 ```
+
+## /v1/current/roma
+Devuelve el estado del clima actual según la ubicación de la ciudad de Roma en formato JSON.
+```json
+
+{
+    "city":
+    {
+        "id":3169070,
+        "name":"Rome",
+        "coord":{"lat":41.8901,"lon":12.4922},
+        "country":"IT",
+        "population":15000,
+        "timezone":7200,
+        "sunrise":1656646703,
+        "sunset":1656701341
+    },
+    "weather":
+    {
+        "dt":1656666000,
+        "main":
+        {
+            "temp":28.56,
+            "feels_like":28.34,
+            "temp_min":28.56,
+            "temp_max":33.32,
+            "pressure":1012,
+            "sea_level":1012,
+            "grnd_level":1009,
+            "humidity":42,
+            "temp_kf":-4.76
+        },
+        "weather":[{"id":801,"main":"Clouds","description":"few clouds","icon":"02d"}],
+        "clouds":{"all":12},
+        "wind":{"speed":3.49,"deg":104,"gust":3.68},
+        "visibility":10000,
+        "pop":0.3,
+        "sys":{"pod":"d"},
+        "dt_txt":"2022-07-01 09:00:00"
+    }
+}
+
+```
+
+## /v1/forecast
+Devuelve el forecast a 5 días de la ubicación según ip-api en formato JSON.
+```json
+{
+    "status":"success",
+    "country":"Argentina",
+    "countryCode":"AR",
+    "region":"B",
+    "regionName":"Buenos Aires",
+    "city":"Aldo Bonzi",
+    "zip":"1770",
+    "lat":-34.6926,
+    "lon":-58.521,
+    "timezone":"America/Argentina/Buenos_Aires",
+    "isp":"Telecentro S.A.",
+    "org":"Telecentro S.A. - Clientes Residenciales",
+    "as":"AS27747 Telecentro S.A.",
+    "query":"127.0.0.1"
+    }
+```
+
+
+
+
+
 
 
 ## Author
