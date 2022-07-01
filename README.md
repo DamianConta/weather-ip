@@ -112,7 +112,7 @@ Devuelve el estado del clima actual según la ubicación de la ip (JSON)
 ```
 
 ## /v1/current/{city}
-Devuelve el estado del clima actual según la ubicación de la ciudad de Roma en formato JSON.
+Devuelve el estado del clima actual según la ubicación de la ciudad {city} en formato JSON.
 
 <b>city</b>:
 <ol>
@@ -168,26 +168,81 @@ Devuelve el estado del clima actual según la ubicación de la ciudad de Roma en
 ## /v1/forecast
 Devuelve el forecast a 5 días de la ubicación según ip-api en formato JSON.
 ```json
+
 {
-    "status":"success",
-    "country":"Argentina",
-    "countryCode":"AR",
-    "region":"B",
-    "regionName":"Buenos Aires",
-    "city":"Aldo Bonzi",
-    "zip":"1770",
-    "lat":-34.6926,
-    "lon":-58.521,
-    "timezone":"America/Argentina/Buenos_Aires",
-    "isp":"Telecentro S.A.",
-    "org":"Telecentro S.A. - Clientes Residenciales",
-    "as":"AS27747 Telecentro S.A.",
-    "query":"127.0.0.1"
+    "city":
+    {
+        "id":2759794,
+        "name":"Aldo Bonzi",
+        "coord":{"lat":-34.6926,"lon":-58.521},
+        "country":"Argentina",
+        "population":2122311,
+        "timezone":7200,
+        "sunrise":1656645745,
+        "sunset":1656705945},
+        "forecast":
+        [
+            {
+                "dt":1656666000,
+                "main":
+                {
+                    "temp":16.37,
+                    "feels_like":16.1,
+                    "temp_min":16.37,
+                    "temp_max":17.82,
+                    "pressure":1015,
+                    "sea_level":1015,
+                    "grnd_level":1015,
+                    "humidity":78,
+                    "temp_kf":-1.45
+                },
+                "weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],
+                "clouds":{"all":30},
+                "wind":{"speed":5.71,"deg":233,"gust":7.34},
+                "visibility":10000,
+                "pop":0.12,
+                "sys":{"pod":"d"},
+                "dt_txt":"2022-07-01 09:00:00"
+            },
+            {
+                "dt":1656676800,
+                "main":
+                {
+                    "temp":17.64,
+                    "feels_like":17.18,
+                    "temp_min":17.64,
+                    "temp_max":18.64,
+                    "pressure":1016,
+                    "sea_level":1016,
+                    "grnd_level":1016,
+                    "humidity":66,
+                    "temp_kf":-1
+                },
+                "weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],
+                "clouds":{"all":41},
+                "wind":{"speed":6.29,"deg":243,"gust":8.27},
+                "visibility":10000,
+                "pop":0.22,
+                "rain":{"3h":0.34},
+                "sys":{"pod":"d"},
+                "dt_txt":"2022-07-01 12:00:00"
+            },
+            .
+            .
+            .
+            .
+            .
+            .
+            .
+            .
+            .
+        ]
     }
+
 ```
 
 ## /v1/forecast/{city}
-Devuelve el forecast a 5 días de la ciudad de Amsterdam en formato JSON.
+Devuelve el forecast a 5 días de la ciudad {city} en formato JSON.
 
 <b>city</b>:
 <ol>
