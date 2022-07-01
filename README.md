@@ -1,4 +1,4 @@
-<h1 align="center">Bienvenidos a crypto-monitor app 👋</h1>
+<h1 align="center">Bienvenidos a weather-ip app 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
@@ -28,7 +28,7 @@ https://api.openweathermap.org . Es posible solicitar la información para otras
 
 Ofrece los siguientes endpoints con la ruta base /v1 y <b>Metodo GET</b>
 
-<ol>
+<ul>
   <li>/v1/location              </li>
   <li>/v1/current               </li>
   <li>/v1/current/roma          </li>
@@ -37,12 +37,12 @@ Ofrece los siguientes endpoints con la ruta base /v1 y <b>Metodo GET</b>
   <li>/v1/current/paris         </li>
   <li>/v1/current/barcelona     </li>
   <li>/v1/forecast              </li>
-  <li>/v1/forecast/roma         Metodo GET     Devuelve el forecast a 5 días de la ciudad de Roma (JSON)</li>
-  <li>/v1/forecast/amsterdam    Metodo GET     Devuelve el forecast a 5 días de la ciudad de Amsterdam (JSON)</li>
-  <li>/v1/forecast/madrid       Metodo GET     Devuelve el forecast a 5 días de la ciudad de Madrid (JSON)</li>
-  <li>/v1/forecast/paris        Metodo GET     Devuelve el forecast a 5 días de la ciudad de París (JSON)</li>
-  <li>/v1/forecast/barcelona    Metodo GET     Devuelve el forecast a 5 días de la ciudad de Barcelona (JSON)</li> 
-</ol>
+  <li>/v1/forecast/roma         </li>
+  <li>/v1/forecast/amsterdam    </li>
+  <li>/v1/forecast/madrid       </li>
+  <li>/v1/forecast/paris        </li>
+  <li>/v1/forecast/barcelona    </li> 
+</ul>
 
 ## /v1/location
 Devuelve la ubicación actual según ip-api en formato JSON.
@@ -174,11 +174,71 @@ Devuelve el forecast a 5 días de la ubicación según ip-api en formato JSON.
     }
 ```
 
+## /v1/forecast/amsterdam
+Devuelve el forecast a 5 días de la ciudad de Amsterdam (JSON)
+```json
 
-
-
-
-
+{
+    "city":
+    {
+        "id":2759794,
+        "name":"Amsterdam",
+        "coord":{"lat":52.3748,"lon":4.8968},
+        "country":"NL",
+        "population":2122311,
+        "timezone":7200,
+        "sunrise":1656645745,
+        "sunset":1656705945},
+        "forecast":
+        [
+            {
+                "dt":1656666000,
+                "main":
+                {
+                    "temp":16.37,
+                    "feels_like":16.1,
+                    "temp_min":16.37,
+                    "temp_max":17.82,
+                    "pressure":1015,
+                    "sea_level":1015,
+                    "grnd_level":1015,
+                    "humidity":78,
+                    "temp_kf":-1.45
+                },
+                "weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],
+                "clouds":{"all":30},
+                "wind":{"speed":5.71,"deg":233,"gust":7.34},
+                "visibility":10000,
+                "pop":0.12,
+                "sys":{"pod":"d"},
+                "dt_txt":"2022-07-01 09:00:00"
+            },
+            {
+                "dt":1656676800,
+                "main":
+                {
+                    "temp":17.64,
+                    "feels_like":17.18,
+                    "temp_min":17.64,
+                    "temp_max":18.64,
+                    "pressure":1016,
+                    "sea_level":1016,
+                    "grnd_level":1016,
+                    "humidity":66,
+                    "temp_kf":-1
+                },
+                "weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],
+                "clouds":{"all":41},
+                "wind":{"speed":6.29,"deg":243,"gust":8.27},
+                "visibility":10000,
+                "pop":0.22,
+                "rain":{"3h":0.34},
+                "sys":{"pod":"d"},
+                "dt_txt":"2022-07-01 12:00:00"
+            }
+        ]
+    }
+```
 
 ## Author
 
