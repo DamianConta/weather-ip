@@ -29,7 +29,8 @@ https://api.openweathermap.org . Es posible solicitar la información para otras
 Ofrece los siguientes endpoints con la ruta base /v1
 
 <ol>
-  <li>/v1/location              Metodo GET     Devuelve la ubicación actual según ip-api (JSON)</li>
+  <li>/v1/location              
+  Metodo GET     Devuelve la ubicación actual según ip-api (JSON)</li>
   <li>/v1/current               Metodo GET     Devuelve el estado del clima actual según la ubicación de la ip (JSON)</li>
   <li>/v1/current/roma          Metodo GET     Devuelve el estado del clima actual según la ubicación de la ciudad de Roma (JSON)</li>
   <li>/v1/current/amsterdam     Metodo GET     Devuelve el estado del clima actual según la ubicación de la ciudad de Amsterdam (JSON)</li>
