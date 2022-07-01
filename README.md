@@ -111,8 +111,19 @@ Devuelve el estado del clima actual según la ubicación de la ip (JSON)
 }
 ```
 
-## /v1/current/roma
+## /v1/current/{city}
 Devuelve el estado del clima actual según la ubicación de la ciudad de Roma en formato JSON.
+
+<b>city</b>:
+<ol>
+    <li>roma</li>
+    <li>amsterdam</li>
+    <li>madrid</li>
+    <li>paris</li>
+    <li>barcelona</li>
+</ol>
+
+
 ```json
 
 {
@@ -175,8 +186,18 @@ Devuelve el forecast a 5 días de la ubicación según ip-api en formato JSON.
     }
 ```
 
-## /v1/forecast/amsterdam
-Devuelve el forecast a 5 días de la ciudad de Amsterdam (JSON)
+## /v1/forecast/{city}
+Devuelve el forecast a 5 días de la ciudad de Amsterdam en formato JSON.
+
+<b>city</b>:
+<ol>
+    <li>roma</li>
+    <li>amsterdam</li>
+    <li>madrid</li>
+    <li>paris</li>
+    <li>barcelona</li>
+</ol>
+
 ```json
 
 {
