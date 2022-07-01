@@ -26,7 +26,8 @@ La aplicación se encuentra desplegada en https://weather-ip.herokuapp.com
 La aplicación devuelve información sobre la ubicación según http://ip-api.com y el estado del clima según
 https://api.openweathermap.org . Es posible solicitar la información para otras cinco ciudades seleccionables.
 
-Ofrece los siguientes endpoints con la ruta base /v1 y <b>Metodo GET</b>
+Ofrece los siguientes endpoints con la ruta base /v1 <br><br>
+<b>Método GET</b><br>
 
 <ul>
   <li>/v1/location              </li>
