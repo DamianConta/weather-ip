@@ -45,7 +45,7 @@ Ofrece los siguientes endpoints con la ruta base /v1 y <b>Metodo GET</b>
 </ol>
 
 ## /v1/location
-Devuelve el estado del clima actual según la ubicación de la ip (JSON)
+Devuelve la ubicación actual según ip-api en formato JSON.
 ```json
 {
     "status":"success",
@@ -61,8 +61,56 @@ Devuelve el estado del clima actual según la ubicación de la ip (JSON)
     "isp":"Telecentro S.A.",
     "org":"Telecentro S.A. - Clientes Residenciales",
     "as":"AS27747 Telecentro S.A.",
-    "query":"127.0.0.1"}
+    "query":"127.0.0.1"
+    }
 ```
+
+## /v1/current
+Devuelve el estado del clima actual según la ubicación de la ip (JSON)
+```json
+{
+    "city":
+    {
+        "id":3427818,
+        "name":"Tapiales",
+        "coord":
+            {
+            "lat":-34.6926,
+            "lon":-58.521
+            },
+        "country":"AR",
+        "population":0,
+        "timezone":-10800,
+        "sunrise":1656673314,
+        "sunset":1656708821
+    },
+    "weather":
+    {
+        "dt":1656666000,
+        "main":
+        {
+            "temp":8.83,
+            "feels_like":6.34,
+            "temp_min":8.42,
+            "temp_max":8.83,
+            "pressure":1015,
+            "sea_level":1015,
+            "grnd_level":1011,
+            "humidity":72,
+            "temp_kf":0.41
+        },
+        "weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],
+        "clouds":{"all":2},
+        "wind":{"speed":4.5,"deg":43,"gust":12.89},
+        "visibility":10000,
+        "pop":0,
+        "sys":{"pod":"n"},
+        "dt_txt":"2022-07-01 09:00:00"
+    }
+}
+```
+
+
 ## Author
 
 👤 **Damián Contardi**
